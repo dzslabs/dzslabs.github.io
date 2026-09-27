@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 300" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract workflow illustration</title>
+  <desc id="desc">Two quiet overlapping geometric panels suggesting workflow modules fitting together.</desc>
+  <rect x="180" y="48" width="176" height="98" rx="5" fill="#EEF2FF" transform="rotate(-4 180 48)"/>
+  <rect x="124" y="126" width="160" height="93" rx="5" fill="#DBEAFE" transform="rotate(-4 124 126)"/>
+  <rect x="203" y="111" width="93" height="69" rx="4" fill="#BFDBFE" opacity=".8" transform="rotate(-4 203 111)"/>
+</svg>

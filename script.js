@@ -1,23 +1,66 @@
+const FORM_ENDPOINT = "";
 
-const menuBtn = document.querySelector('.menu-btn');
-const mobileMenu = document.querySelector('.mobile-menu');
-if (menuBtn && mobileMenu) {
-  menuBtn.addEventListener('click', () => {
-    const open = mobileMenu.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+const menuButton = document.querySelector("[data-menu-toggle]");
+const mobileNav = document.querySelector("[data-mobile-nav]");
+
+if (menuButton && mobileNav) {
+  menuButton.addEventListener("click", () => {
+    const open = menuButton.getAttribute("aria-expanded") === "true";
+    menuButton.setAttribute("aria-expanded", String(!open));
+    mobileNav.classList.toggle("open", !open);
+    document.body.classList.toggle("menu-open", !open);
+  });
+
+  mobileNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menuButton.setAttribute("aria-expanded", "false");
+      mobileNav.classList.remove("open");
+      document.body.classList.remove("menu-open");
+    });
   });
 }
-document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', () => {
-  mobileMenu?.classList.remove('open');
-  menuBtn?.setAttribute('aria-expanded', 'false');
-}));
 
-const contactForm = document.querySelector('#contact-form');
+const contactForm = document.querySelector("[data-contact-form]");
+const formStatus = document.querySelector("[data-form-status]");
+
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const status = document.querySelector('#form-status');
-    status.style.display = 'block';
-    status.textContent = 'This form is ready for a mail or form backend, but it is not connected yet. Add the verified DZS Labs business email or form endpoint before launch.';
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+
+    if (!FORM_ENDPOINT) {
+      if (formStatus) {
+        formStatus.textContent = "Contact form delivery has not yet been configured.";
+      }
+      return;
+    }
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalLabel = submitButton.textContent;
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending…";
+    if (formStatus) formStatus.textContent = "";
+
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: { Accept: "application/json" }
+      });
+
+      if (!response.ok) throw new Error("Request failed");
+
+      contactForm.reset();
+      if (formStatus) formStatus.textContent = "Thanks. Your message has been received.";
+    } catch (error) {
+      if (formStatus) formStatus.textContent = "The message could not be sent. Please try again later.";
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalLabel;
+    }
   });
 }

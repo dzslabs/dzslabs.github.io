@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196 40" role="img" aria-labelledby="title">
+  <title id="title">DZS Labs</title>
+  <path d="M7 12.5H24.5L7.8 27.5H25" fill="none" stroke="#2563EB" stroke-width="6.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="40" y="27" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing="-0.5"><tspan font-weight="700">DZS</tspan><tspan font-weight="500"> Labs</tspan></text>
+</svg>
