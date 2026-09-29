@@ -76,7 +76,7 @@ Do not fabricate credibility signals.
 
 DZS Labs currently has two products.
 
-### SlideBatch
+### Slides from Photos
 
 A Google Slides add-on designed to turn batches of photos into presentation slides automatically.
 
@@ -279,7 +279,7 @@ Approximate V1.3 palette:
 - Ink: `#0F172A`
 - Neutral gray: `#E5E7EB`
 - Primary blue: `#2563EB`
-- SlideBatch accent: `#8B5CF6`
+- Slides from Photos accent: `#8B5CF6`
 - ShelfReady Sheets accent: `#10B981`
 
 Primary typography:
@@ -411,7 +411,7 @@ Secondary link:
 
 Products shown:
 
-- SlideBatch
+- Slides from Photos
 - ShelfReady Sheets
 
 Both must remain marked:
@@ -430,7 +430,7 @@ Main headline:
 
 The page currently presents:
 
-- SlideBatch
+- Slides from Photos
 - ShelfReady Sheets
 
 Both are in development.

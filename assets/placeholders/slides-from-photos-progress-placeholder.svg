@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Progress and resume placeholder</title>
+  <desc id="desc">Temporary placeholder image for a saved progress and resume state.</desc>
+  <rect width="640" height="360" rx="12" fill="#F8FAFC"/>
+  <rect x="32" y="32" width="576" height="296" rx="10" fill="none" stroke="#CBD5E1" stroke-width="3" stroke-dasharray="10 8"/>
+  <rect x="96" y="126" width="448" height="18" rx="9" fill="#E2E8F0"/>
+  <rect x="96" y="126" width="260" height="18" rx="9" fill="#93C5FD"/>
+  <text x="320" y="104" fill="#64748B" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">PLACEHOLDER</text>
+  <text x="320" y="190" fill="#475569" font-family="Arial, sans-serif" font-size="20" text-anchor="middle">Progress / Resume</text>
+</svg>

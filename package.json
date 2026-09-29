@@ -4,7 +4,9 @@
   "description": "Static public website for **DZS Labs**, a software brand owned and operated by **DZS Infinity LLC**.",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "live-server --port=3000 --open=/index.html",
+    "start": "npm run dev"
   },
   "repository": {
     "type": "git",
@@ -17,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/dzslabs/dzslabs.github.io/issues"
   },
-  "homepage": "https://github.com/dzslabs/dzslabs.github.io#readme"
+  "homepage": "https://github.com/dzslabs/dzslabs.github.io#readme",
+  "private": true,
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
 }

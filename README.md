@@ -10,13 +10,18 @@ Static public website for **DZS Labs**, a software brand owned and operated by *
 
 ## Run locally
 
-Either open `index.html` directly in a browser, or from the project directory run:
+Install Node.js (an LTS release is recommended), which includes npm. From the repository directory run:
 
 ```bash
-python3 -m http.server 8000
+npm install
+npm run dev
 ```
 
-Then open `http://localhost:8000/`.
+The development server opens `index.html` in your browser. The site is available at http://localhost:3000. Saving an HTML, CSS, JavaScript, or asset file automatically refreshes the browser. Keep port 3000 free before starting the server.
+
+`npm start` runs the same development server. Stop it with `Ctrl+C` in the terminal.
+
+`live-server` is a development dependency only, and `node_modules/` is ignored by Git. Production remains plain static HTML, CSS, JavaScript, and assets: GitHub Pages needs no npm install or build step. Keep `.nojekyll` in the repository; no `dist` or `build` directory is required.
 
 ## Contact form configuration
 
@@ -40,6 +45,9 @@ to the endpoint supplied by a service such as Formspree or Web3Forms. Until an e
 ├── contact.html
 ├── privacy.html
 ├── terms.html
+├── slides-from-photos/
+│   ├── index.html
+│   └── slides-from-photos.css
 ├── styles.css
 ├── script.js
 ├── .nojekyll

@@ -13,13 +13,17 @@
     <div class="contact-layout">
       <section class="contact-copy"><p class="eyebrow">Contact</p><h1>Contact DZS Labs</h1><p class="lead">For product questions, partnerships, business inquiries, marketplace verification, privacy, or legal matters, get in touch.</p></section>
       <section class="contact-card" aria-label="Contact form">
-        <form data-contact-form novalidate>
+        <form action="https://formsubmit.co/contact@dzslabs.site" method="POST" data-contact-form>
+          <input type="hidden" name="_subject" value="New message from DZS Labs">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://dzslabs.site/contact-success.html">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <div class="form-group"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required></div>
           <div class="form-group"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required></div>
           <div class="form-group"><label for="subject">Subject</label><input id="subject" name="subject" type="text" placeholder="How can we help?" required></div>
           <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" placeholder="Your message" required></textarea></div>
           <button class="button" type="submit">Send message</button>
-          <p class="form-status" role="status" aria-live="polite" data-form-status></p>
         </form>
         <p class="legal-note">DZS Labs is a software brand owned and operated by DZS Infinity LLC.</p>
       </section>
