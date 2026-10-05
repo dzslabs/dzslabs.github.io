@@ -72,25 +72,25 @@ Do not fabricate credibility signals.
 
 ---
 
-## 3. Current products
+## 3. Current product state
 
-DZS Labs currently has two products.
+### Current public product
+
+The only product currently presented on the public DZS Labs website is:
 
 ### Slides from Photos
 
 A Google Slides add-on designed to turn batches of photos into presentation slides automatically.
 
-Current status:
+Do not display an `In development` badge or status for Slides from Photos unless the user explicitly requests that status again. Do not infer a replacement availability status. Do not claim that Slides from Photos is publicly installable unless that is explicitly confirmed.
 
-`In development`
-
-It is not currently publicly available.
+### Hidden / unpublished product
 
 ### ShelfReady Sheets
 
-A software product focused on inventory receiving workflows for independent retailers using supplier spreadsheets and existing POS/spreadsheet processes.
+ShelfReady Sheets exists as a DZS Labs project/product but is intentionally hidden from the current public website. Do not reintroduce ShelfReady Sheets into public pages unless the user explicitly requests it.
 
-Its current product direction includes:
+Its internal product direction includes:
 
 - importing supplier CSV / Excel data
 - reviewing exceptions
@@ -98,15 +98,9 @@ Its current product direction includes:
 - preparing barcode / price label output
 - integrating with existing retailer POS / spreadsheet workflows
 
-Current status:
+Keep this internal context when it helps prevent accidental reintroduction, but do not present ShelfReady Sheets as a current public product.
 
-`In development`
-
-It is not currently publicly available.
-
-Do not invent product capabilities that have not been explicitly defined.
-
-Do not claim either product is publicly available until the user explicitly changes its status.
+Do not invent product capabilities or a replacement availability status.
 
 Never use claims such as:
 
@@ -409,14 +403,11 @@ Secondary link:
 
 `About DZS Labs`
 
-Products shown:
+Product shown:
 
 - Slides from Photos
-- ShelfReady Sheets
 
-Both must remain marked:
-
-`In development`
+Slides from Photos should not carry an `In development` badge or status in the public catalog.
 
 Do not add large marketing sections unless explicitly requested.
 
@@ -431,11 +422,8 @@ Main headline:
 The page currently presents:
 
 - Slides from Photos
-- ShelfReady Sheets
 
-Both are in development.
-
-The page must communicate clearly that they are not yet publicly available.
+Do not invent an availability status for the product.
 
 Do not turn product presentation into pricing cards.
 
