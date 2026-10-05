@@ -1,6 +1,10 @@
 const menuButton = document.querySelector("[data-menu-toggle]");
 const mobileNav = document.querySelector("[data-mobile-nav]");
 
+document.querySelectorAll("[data-current-year]").forEach((year) => {
+  year.textContent = String(new Date().getFullYear());
+});
+
 if (menuButton && mobileNav) {
   menuButton.addEventListener("click", () => {
     const open = menuButton.getAttribute("aria-expanded") === "true";
