@@ -133,7 +133,7 @@ Google user data processed by Slides from Photos is not shared or transferred to
 - sale to information resellers;
 - determining creditworthiness;
 - lending purposes; or
-- developing, improving, or training generalized or non-personalized artificial intelligence or machine-learning models.
+- developing, improving, or training artificial intelligence or machine-learning models.
 
 Information may be disclosed only where permitted by applicable Google policies and law, such as:
 - when specifically authorized by the user;
@@ -150,9 +150,9 @@ Google user data is used only to provide or improve user-facing functionality th
 
 Slides from Photos does not use Google user data for advertising, creditworthiness, lending, data brokerage, profiling, or other prohibited purposes.
 
-Slides from Photos does not use raw, aggregated, anonymized, de-identified, or derived data received from Google Workspace APIs or Google Photos APIs to develop, improve, or train generalized or non-personalized artificial intelligence or machine-learning models.
+Slides from Photos does not use raw, aggregated, anonymized, de-identified, or derived data received from Google Workspace APIs or Google Photos APIs to develop, improve, or train artificial intelligence or machine-learning models.
 
-Slides from Photos does not transfer Google Workspace API or Google Photos API user data to third-party artificial intelligence or machine-learning services for the purpose of developing, improving, or training generalized or non-personalized AI/ML models.
+Slides from Photos does not transfer Google Workspace API or Google Photos API user data to third-party artificial intelligence or machine-learning services.
 
 Human access to Google user data is limited to circumstances permitted by applicable Google policies, such as when:
 - the user has provided appropriate authorization;
