@@ -79,9 +79,10 @@ This includes using selected photos and related information to:
 - continue supported interrupted batches;
 - verify that a resumed batch corresponds to the originally selected photos;
 - identify processing problems;
-- measure limited product usage and reliability through the pseudonymous analytics described in Section 13;
 - calculate completed, skipped, and failed items; and
 - display the final processing result.
+Slides from Photos also uses the limited pseudonymous analytics described in Section 13 to measure product usage and reliability and to improve the product.
+
 Google user data is not used for unrelated purposes.
 
 ## 6. Raw, Aggregated, Anonymized, and Derived Google User Data
