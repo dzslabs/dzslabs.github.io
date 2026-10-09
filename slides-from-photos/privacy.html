@@ -26,13 +26,13 @@
 <li><a href="#google-api-services-user-data-policy">10. Google API Services User Data Policy</a></li>
 <li><a href="#security">11. Security</a></li>
 <li><a href="#advertising-and-data-monetization">12. Advertising and Data Monetization</a></li>
-<li><a href="#analytics-and-diagnostics">13. Analytics and Diagnostics</a></li>
+<li><a href="#analytics-and-diagnostics">13. Product Analytics and Diagnostics</a></li>
 <li><a href="#removing-access">14. Removing Access</a></li>
 <li><a href="#data-deletion-requests">15. Data Deletion Requests</a></li>
 <li><a href="#children">16. Children</a></li>
 <li><a href="#changes-to-this-notice">17. Changes to This Notice</a></li>
 <li><a href="#contact">18. Contact</a></li>
-</ol></aside><article class="legal-doc"><header class="page-intro"><p class="eyebrow">Slides from Photos</p><h1>Product Privacy Notice</h1><p class="last-updated">Effective Date: October 5, 2026<br>Last Updated: October 6, 2026</p><p>This Product Privacy Notice explains how Slides from Photos, a Google Slides add-on operated by DZS Infinity LLC under the DZS Labs brand, accesses, uses, stores, and shares information when you use the add-on.</p>
+</ol></aside><article class="legal-doc"><header class="page-intro"><p class="eyebrow">Slides from Photos</p><h1>Product Privacy Notice</h1><p class="last-updated">Effective Date: October 5, 2026<br>Last Updated: October 9, 2026</p><p>This Product Privacy Notice explains how Slides from Photos, a Google Slides add-on operated by DZS Infinity LLC under the DZS Labs brand, accesses, uses, stores, and shares information when you use the add-on.</p>
 <p>This notice supplements the general DZS Labs Privacy Policy available at:</p>
 <p><a href="https://dzslabs.site/privacy.html">https://dzslabs.site/privacy.html</a></p>
 <p>If this Product Privacy Notice provides more specific information about Slides from Photos than the general DZS Labs Privacy Policy, this Product Privacy Notice applies to Slides from Photos.</p></header><section id="about-slides-from-photos" class="legal-section"><h2>1. About Slides from Photos</h2>
@@ -112,6 +112,7 @@
 <li>continue supported interrupted batches;</li>
 <li>verify that a resumed batch corresponds to the originally selected photos;</li>
 <li>identify processing problems;</li>
+<li>measure limited product usage and reliability through the pseudonymous analytics described in Section 13;</li>
 <li>calculate completed, skipped, and failed items; and</li>
 <li>display the final processing result.</li>
 </ul>
@@ -126,8 +127,9 @@
 <p>This batch state may be derived from or associated with the photos and Google resources selected by the user, but it is used only to operate and maintain the user-requested Slides from Photos workflow.</p>
 <p>Slides from Photos does not use batch or job information for advertising, profiling, data brokerage, creditworthiness, lending, generalized AI/ML model training, or unrelated purposes.</p>
 <p>The job state is separate from the user's Google authorization. Revoking Google authorization does not by itself guarantee immediate deletion of existing batch state where that state remains reasonably necessary or legally permitted, as further described in the retention, removing-access, and deletion sections of this notice.</p></section>
-<section id="data-storage-and-retention" class="legal-section"><h2>8. Data Storage and Retention</h2><p>Slides from Photos retains information only for as long as reasonably necessary to provide the user-requested functionality, including supported batch processing, Resume, verification, recovery, and processing-result functionality.</p>
+<section id="data-storage-and-retention" class="legal-section"><h2>8. Data Storage and Retention</h2><p>Slides from Photos retains information only for as long as reasonably necessary for the purposes described in this notice, including supported batch processing, Resume, verification, recovery, processing-result functionality, and the limited product analytics described in Section 13.</p>
 <p>Limited batch state and job metadata may remain available when reasonably necessary to allow a user to continue or recover a supported interrupted job.</p>
+<p>Analytics data processed through Google Analytics is subject to the retention settings configured for the DZS Labs Google Analytics property and Google's applicable service terms.</p>
 <p>Slides from Photos does not retain Google user data or derived batch information for advertising, profiling, data brokerage, creditworthiness, lending, generalized AI/ML model training, or unrelated purposes.</p>
 <p>When stored information is no longer reasonably necessary for its disclosed product purpose, it is deleted, anonymized, or otherwise handled in accordance with applicable law, Google platform requirements, and the DZS Labs Privacy Policy.</p>
 <p>Users may contact DZS Labs regarding applicable stored product information or deletion requests using the contact information provided in this notice.</p></section>
@@ -176,9 +178,39 @@
 <p>Google user data is not sold.</p>
 <p>Google user data is not used for personalized advertising, retargeting, interest-based advertising, advertising profiles, or data brokerage.</p>
 <p>Any future monetization of Slides from Photos, including paid product features or subscriptions, does not change these restrictions on the use of Google user data.</p></section>
-<section id="analytics-and-diagnostics" class="legal-section"><h2>13. Analytics and Diagnostics</h2><p>Slides from Photos may process limited technical or diagnostic information where necessary to operate, secure, troubleshoot, or improve the reliability of the product.</p>
-<p>Google Drive content, Google Photos media, Google Slides content, and Slides from Photos batch state are not used to create advertising profiles or unrelated analytics datasets.</p>
-<p>Any technical or diagnostic information used by the product is limited to legitimate operational purposes and remains subject to the restrictions applicable to Google user data where those restrictions apply.</p></section>
+<section id="analytics-and-diagnostics" class="legal-section"><h2>13. Product Analytics and Diagnostics</h2><p>Slides from Photos uses Google Analytics 4 (GA4) through the Google Analytics Measurement Protocol to collect limited pseudonymous product usage analytics.</p>
+<p>DZS Labs uses this analytics information to understand use of the core Slides from Photos workflow, measure product reliability, and improve the product.</p>
+<p>The analytics implementation may process:</p>
+<ul>
+<li>a random pseudonymous analytics identifier generated by Slides from Photos and stored in Google Apps Script UserProperties;</li>
+<li>the Slides from Photos product identifier;</li>
+<li>product lifecycle events, such as opening the add-on, starting a batch, completing a batch, using Resume, or reaching a genuine terminal batch failure;</li>
+<li>the normalized photo source type, such as Google Drive, Google Photos, or computer;</li>
+<li>a batch-size range rather than the exact contents of the selected batch; and</li>
+<li>the selected Fit or Fill layout mode.</li>
+</ul>
+<p>The pseudonymous analytics identifier is randomly generated. It is not derived from the user's name, email address, Google Account identifier, Google Drive identity, Google Photos identity, presentation identity, filenames, URLs, or user content.</p>
+<p>Slides from Photos does not send the following information to Google Analytics as part of this product analytics implementation:</p>
+<ul>
+<li>names;</li>
+<li>email addresses;</li>
+<li>Google Account identifiers;</li>
+<li>filenames;</li>
+<li>Google Drive file or folder identifiers;</li>
+<li>Google Photos media or album identifiers;</li>
+<li>photo URLs;</li>
+<li>Google Slides presentation identifiers or titles;</li>
+<li>slide content;</li>
+<li>image content;</li>
+<li>batch or Job identifiers;</li>
+<li>revision identifiers;</li>
+<li>raw exception messages;</li>
+<li>stack traces; or</li>
+<li>the exact contents of a selected photo batch.</li>
+</ul>
+<p>The limited analytics information described above is transmitted to Google Analytics, a service provided by Google LLC.</p>
+<p>DZS Labs uses this analytics information only for product usage measurement, reliability measurement, and product improvement. It is not used for advertising, personalized advertising, profiling, data brokerage, creditworthiness, lending, or developing, improving, or training artificial intelligence or machine-learning models.</p>
+<p>Analytics processing is separate from the core photo-to-slides operation. A failure of the analytics service does not prevent Slides from Photos from performing its user-requested functionality.</p></section>
 <section id="removing-access" class="legal-section"><h2>14. Removing Access</h2>
 <p>Users can remove Slides from Photos' access to their Google Account through Google's account permission controls.</p>
 <p>Removing authorization prevents the application from continuing to use that authorization to access Google services.</p>
