@@ -579,7 +579,9 @@ Do not introduce tracking or analytics without explicit instruction.
 When Analytics is enabled, every new public HTML page must load the shared
 `script.js`. Google Analytics 4 is initialized centrally from `script.js` with
 measurement ID `G-TB36M1KMD2` and must remain gated on Analytics consent. Do
-not paste GA snippets directly into individual pages.
+not paste GA snippets directly into individual pages. Marketplace and product
+CTA analytics should use declarative `data-*` attributes and shared
+`script.js` tracking logic; do not add inline `gtag` handlers.
 
 ---
 

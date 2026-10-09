@@ -36,6 +36,9 @@ for (const page of publicPages.sort()) {
   if (file.includes(measurementId) || file.includes("googletagmanager.com/gtag/js")) {
     failures.push(`${page}: contains duplicated GA configuration`);
   }
+  if (/\bgtag\s*\(\s*["']event["']/.test(file)) {
+    failures.push(`${page}: contains inline gtag event tracking; use data attributes`);
+  }
 }
 
 if (failures.length) {

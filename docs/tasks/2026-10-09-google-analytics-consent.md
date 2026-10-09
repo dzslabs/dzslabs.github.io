@@ -35,6 +35,8 @@ All 13 public HTML pages load the shared `script.js`. No existing GA, GTM, conse
 - Added a concise maintenance rule to `AGENTS.md` documenting centralized, consent-gated analytics.
 - Updated General Privacy Section 14 to name Google Analytics 4 and describe its optional, consent-gated loading, Privacy choices reversal, and known-cookie cleanup behavior.
 - Updated the General Privacy Last Updated date to October 9, 2026 in both the website HTML and authoritative Markdown source.
+- Added generic declarative CTA event tracking through `data-*` attributes and shared `script.js` logic. The Slides from Photos Marketplace CTA emits the consent-aware `marketplace_click` event with `product=slides_from_photos`, `marketplace=google_workspace`, `cta_action=install`, and `cta_position=hero`.
+- Kept CTA navigation independent of GA success and added no UTM parameters.
 
 ## Files changed
 
@@ -50,6 +52,8 @@ All 13 public HTML pages load the shared `script.js`. No existing GA, GTM, conse
 - `package.json`
 - `AGENTS.md`
 - `privacy.html`
+- `slides-from-photos/index.html`
+- `scripts/validate-public-pages.js`
 
 ### Deleted
 
@@ -61,6 +65,8 @@ The existing shared `script.js` is the single implementation location because al
 
 The approved disclosure now appears in Section 14 of both General Privacy representations. No Product Privacy Notice was modified.
 
+Marketplace/product CTA tracking uses the standard declarative attribute vocabulary (`data-analytics-event`, `data-product`, `data-marketplace`, `data-cta-action`, and `data-cta-position`). The shared click handler sends events only when consent is `granted` and GA is initialized; otherwise it leaves navigation untouched.
+
 ## Validation
 
 - `node --check script.js` passed.
@@ -70,6 +76,7 @@ The approved disclosure now appears in Section 14 of both General Privacy repres
 - `npm run validate:public-pages` passed and validated all 13 public HTML pages after the Privacy update.
 - Static inspection confirmed no GA request path is created until the stored preference is `granted`, and no direct GA snippet is present in public HTML.
 - Manual browser network testing confirmed no Google Analytics request before consent, Google Analytics loading after `Accept cookies`, and no Google Analytics loading after `Decline`.
+- Static inspection confirmed the Marketplace CTA carries the approved event attributes, uses the exact Marketplace URL without UTM parameters, and contains no inline GA handler.
 - Responsive behavior was reviewed through the scoped CSS rules for approximately 390px and the existing shared layout remains unchanged; visual browser screenshots were not available in this environment.
 
 ## Known issues

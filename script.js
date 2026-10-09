@@ -144,6 +144,30 @@ function setupAnalytics() {
   }
 }
 
+function trackAnalyticsEvent(event) {
+  const trigger = event.target instanceof Element
+    ? event.target.closest("[data-analytics-event]")
+    : null;
+  if (
+    !trigger
+    || readAnalyticsConsent() !== "granted"
+    || !window.__dzsAnalyticsInitialized
+    || typeof window.gtag !== "function"
+  ) {
+    return;
+  }
+
+  const eventName = trigger.dataset.analyticsEvent;
+  if (!eventName) return;
+
+  window.gtag("event", eventName, {
+    product: trigger.dataset.product,
+    marketplace: trigger.dataset.marketplace,
+    cta_action: trigger.dataset.ctaAction,
+    cta_position: trigger.dataset.ctaPosition,
+  });
+}
+
 document.querySelectorAll("[data-current-year]").forEach((year) => {
   year.textContent = String(new Date().getFullYear());
 });
@@ -166,3 +190,8 @@ if (menuButton && mobileNav) {
 }
 
 setupAnalytics();
+
+if (!window.__dzsAnalyticsEventTrackingBound) {
+  document.addEventListener("click", trackAnalyticsEvent);
+  window.__dzsAnalyticsEventTrackingBound = true;
+}
