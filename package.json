@@ -5,6 +5,7 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "validate:public-pages": "node scripts/validate-public-pages.js",
     "dev": "live-server --port=3000 --open=/index.html",
     "start": "npm run dev"
   },
